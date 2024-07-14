@@ -1,4 +1,4 @@
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 import streamlit as st
 from datetime import datetime
@@ -6,7 +6,7 @@ from utils import load_posts, save_posts, display_posts, get_user_country
 from translations import translations
 from css import custom_css
 
-load_dotenv()
+# load_dotenv()
 chat_model = ChatOpenAI()
 PICKLE_FILE = 'posts.pkl'
 
