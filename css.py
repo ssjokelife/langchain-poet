@@ -39,9 +39,6 @@ def custom_css():
                 padding: 0.5em 2em;
                 cursor: pointer;
             }
-            .input-container button:hover {
-                background-color: #555555;
-            }
             .post-container {
                 background-color: #ffffff;
                 border-radius: 10px;
@@ -54,11 +51,22 @@ def custom_css():
                 justify-content: space-between;
                 align-items: center;
             }
+            .subheader-container {
+                display: flex;
+                align-items: center;
+            }
             .sort-refresh-container {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 gap: 10px;
+            }
+            .input-output-container {
+                background-color: #ffffff;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                padding: 1em;
+                margin-top: 2em;
             }
             .footer {
                 position: fixed;
@@ -68,39 +76,26 @@ def custom_css():
                 background-color: #333333;
                 color: white;
                 text-align: center;
-                padding: 10px;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                flex-wrap: nowrap;
+                padding: 10px 0;
             }
             .footer-content {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                width: 100%;
-                padding: 0 10px;
-            }
-            .footer-content p {
-                margin: 0;
-                white-space: nowrap;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 20px;
             }
             .language-select {
                 display: flex;
-                justify-content: flex-end;
                 align-items: center;
-                margin-left: auto;
             }
             .language-select label {
                 margin-right: 10px;
             }
-            .language-select select {
+            #language-select-container select {
                 padding: 5px;
                 border-radius: 5px;
-                border: none;
-                font-size: 16px;
-                background-color: #ffffff;
-                color: #333333;
             }
         </style>
     """, unsafe_allow_html=True)
