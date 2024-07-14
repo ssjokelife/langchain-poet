@@ -10,6 +10,15 @@ from css import custom_css
 chat_model = ChatOpenAI()
 PICKLE_FILE = 'posts.pkl'
 
+# 'Buy Me a Coffee' 버튼 HTML 및 CSS 코드
+buy_me_a_coffee_button = """
+<div style="position: fixed; bottom: 10px; right: 10px;">
+    <a href="https://www.buymeacoffee.com/your_username" target="_blank">
+        <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=your_username&button_colour=FFDD00&font_colour=000000&font_family=Arial&outline_colour=000000&coffee_colour=ffffff" />
+    </a>
+</div>
+"""
+
 description = """
 내 말을 들어줘.는 가벼운 내용부터 마음의 깊은 고민들을 여러 관점으로 피드백을 얻기 위한 앱입니다.
 세상에는 다양한 사람들이 있다 보니 같은 내용에 대해 어떤 경우는 위로를 받기도 하고 상처를 받기도 합니다.
