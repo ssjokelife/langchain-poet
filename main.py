@@ -1,4 +1,4 @@
-# from dotenv import load_dotenv
+from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 import streamlit as st
 from datetime import datetime
@@ -6,13 +6,13 @@ from utils import load_posts, save_posts, display_posts, get_user_country
 from translations import translations
 from css import custom_css
 
-# load_dotenv()
+load_dotenv()
 chat_model = ChatOpenAI()
 PICKLE_FILE = 'posts.pkl'
 
 # 'Buy Me a Coffee' 버튼 HTML 및 CSS 코드
 buy_me_a_coffee_button = """
-<div style="position: fixed; bottom: 50px; right: 10px;">
+<div style="position: fixed; bottom: 70px; right: 10px;">
     <a href="https://www.buymeacoffee.com/your_username" target="_blank">
         <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=your_username&button_colour=FFDD00&font_colour=000000&font_family=Arial&outline_colour=000000&coffee_colour=ffffff" />
     </a>
@@ -66,6 +66,9 @@ if 'language_select' not in st.session_state:
 
 # CSS 스타일 적용
 custom_css()
+
+# 'Buy Me a Coffee' 버튼 표시
+st.markdown(buy_me_a_coffee_button, unsafe_allow_html=True)
 
 # 타이틀과 설명 힌트 추가
 st.markdown(f'''

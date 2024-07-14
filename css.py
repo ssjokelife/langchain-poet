@@ -76,26 +76,7 @@ def custom_css():
                 background-color: #333333;
                 color: white;
                 text-align: center;
-                padding: 10px 0;
-            }
-            .footer-content {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                max-width: 1200px;
-                margin: 0 auto;
-                padding: 0 20px;
-            }
-            .language-select {
-                display: flex;
-                align-items: center;
-            }
-            .language-select label {
-                margin-right: 10px;
-            }
-            #language-select-container select {
-                padding: 5px;
-                border-radius: 5px;
+                padding: 10px 10px;
             }
         </style>
     """, unsafe_allow_html=True)
