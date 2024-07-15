@@ -12,7 +12,7 @@ translations = {
         'likes': '좋아요'
     },
     'English': {
-        'title': 'Listen to Me.',
+        'title': 'Listen to Me..',
         'prompt': 'Please enter your content.',
         'submit': 'Submit',
         'sort_by': 'Sort by',
