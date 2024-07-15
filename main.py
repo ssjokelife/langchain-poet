@@ -136,57 +136,57 @@ with st.container():
                 st.session_state.posts.append(new_post)
                 save_posts(st.session_state.posts, PICKLE_FILE)
             st.session_state.button_clicked = False
-
-# 댓글 목록
-st.write("---")
-st.markdown('<div class="header-container">', unsafe_allow_html=True)
-col1, col2 = st.columns([3, 1], gap="small")
-with col1:
-    st.markdown('<div class="subheader-container">', unsafe_allow_html=True)
-    st.subheader(f"{len(st.session_state.posts)} {translations[st.session_state.language]['comments_title']}")
-    st.markdown('</div>', unsafe_allow_html=True)
-with col2:
-    st.markdown('<div class="sort-refresh-container">', unsafe_allow_html=True)
-    sort_by_options = [translations[st.session_state.language]["sort_by_likes"], translations[st.session_state.language]["sort_by_recent"]]
-    if st.session_state.sort_by not in sort_by_options:
-        st.session_state.sort_by = sort_by_options[0]
-    sort_by = st.selectbox("", sort_by_options, key='sort_by', label_visibility="collapsed")
-    st.markdown('</div>', unsafe_allow_html=True)
-st.markdown('</div>', unsafe_allow_html=True)
-
-# 게시물 표시
-display_posts(st.session_state.posts, st.session_state.sort_by, st.session_state.language, translations)
-
-# Footer와 언어 선택
-st.markdown("""
-    <div class="footer">
-        <div class="footer-content">
-            <p>&copy; 2024 팀꾸루. All rights reserved.</p>
-        </div>
-    </div>
-""", unsafe_allow_html=True)
-
-# 언어 선택
-language_options = ["한국어", "English", "中文", "日本語"]
-# st.selectbox("Language:", language_options,
-#              key='language_select',
-#              index=language_options.index(st.session_state.language),
-#              on_change=set_language,
-#              label_visibility="collapsed")
-
-# Footer의 언어 선택 부분에 Streamlit selectbox를 삽입
-st.markdown(
-    """
-    <script>
-        function moveSelectbox() {
-            var container = document.querySelector('#language-select-container');
-            var select = document.querySelector('select[data-baseweb="select"]');
-            if (container && select) {
-                container.appendChild(select.parentElement);
-            }
-        }
-        setTimeout(moveSelectbox, 100);
-    </script>
-    """,
-    unsafe_allow_html=True
-)
+#
+# # 댓글 목록
+# st.write("---")
+# st.markdown('<div class="header-container">', unsafe_allow_html=True)
+# col1, col2 = st.columns([3, 1], gap="small")
+# with col1:
+#     st.markdown('<div class="subheader-container">', unsafe_allow_html=True)
+#     st.subheader(f"{len(st.session_state.posts)} {translations[st.session_state.language]['comments_title']}")
+#     st.markdown('</div>', unsafe_allow_html=True)
+# with col2:
+#     st.markdown('<div class="sort-refresh-container">', unsafe_allow_html=True)
+#     sort_by_options = [translations[st.session_state.language]["sort_by_likes"], translations[st.session_state.language]["sort_by_recent"]]
+#     if st.session_state.sort_by not in sort_by_options:
+#         st.session_state.sort_by = sort_by_options[0]
+#     sort_by = st.selectbox("", sort_by_options, key='sort_by', label_visibility="collapsed")
+#     st.markdown('</div>', unsafe_allow_html=True)
+# st.markdown('</div>', unsafe_allow_html=True)
+#
+# # 게시물 표시
+# display_posts(st.session_state.posts, st.session_state.sort_by, st.session_state.language, translations)
+#
+# # Footer와 언어 선택
+# st.markdown("""
+#     <div class="footer">
+#         <div class="footer-content">
+#             <p>&copy; 2024 팀꾸루. All rights reserved.</p>
+#         </div>
+#     </div>
+# """, unsafe_allow_html=True)
+#
+# # 언어 선택
+# language_options = ["한국어", "English", "中文", "日本語"]
+# # st.selectbox("Language:", language_options,
+# #              key='language_select',
+# #              index=language_options.index(st.session_state.language),
+# #              on_change=set_language,
+# #              label_visibility="collapsed")
+#
+# # Footer의 언어 선택 부분에 Streamlit selectbox를 삽입
+# st.markdown(
+#     """
+#     <script>
+#         function moveSelectbox() {
+#             var container = document.querySelector('#language-select-container');
+#             var select = document.querySelector('select[data-baseweb="select"]');
+#             if (container && select) {
+#                 container.appendChild(select.parentElement);
+#             }
+#         }
+#         setTimeout(moveSelectbox, 100);
+#     </script>
+#     """,
+#     unsafe_allow_html=True
+# )
